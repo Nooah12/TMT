@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
-import Image from "next/image";
+import TaskInputForm from "@/components/TaskInputForm";
 
 export default function Home() {
   return (
     <>
       <Header />
+      <TaskInputForm />
     </>
   );
 }

@@ -9,8 +9,8 @@ test('Renders input form with description and category fields', () => {
 });
 
 test('Submits the form with valid data', () => {
-  const mockAddTask = jest.fn();
-  render(<TaskInputForm onAddTask={mockAddTask} />);
+  const mockAddTask = jest.fn(); // same as the one above!
+  render(<TaskInputForm onAddTask={mockAddTask} />); // same as empty function
 
   fireEvent.change(screen.getByLabelText(/task description/i), { target: { value: 'Test Task' } });
   fireEvent.change(screen.getByLabelText(/category/i), { target: { value: 'Personal' } });
