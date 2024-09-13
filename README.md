@@ -22,34 +22,34 @@ The app also includes a **progress bar** that tracks how many tasks have been ad
 ## Screenshots
 
 ### Task Description
-![App Overview](https://github.com/user-attachments/assets/7705ab9c-e8cd-4e94-8cb0-7bb244e682b2)
+![1](https://github.com/user-attachments/assets/8adc0d8d-8622-43fe-857e-48184aee4ad6)
 
 ### Category List
-![Category List](https://github.com/user-attachments/assets/ee14b79b-c3f1-42f7-83df-5edbb032caba)
+![2](https://github.com/user-attachments/assets/698f3f60-fedd-4fe7-b2d7-0c7f5b85a8e6)
 
 ### Add Task Button
-![Add Task Button](https://github.com/user-attachments/assets/3bfc514f-ff55-4d08-95c0-8765e11f88e0)
+![3](https://github.com/user-attachments/assets/c0147d4c-f22d-4b20-a790-c879344f03ab)
 
 ### Category Filter
-![Category Filter](https://github.com/user-attachments/assets/27a16e70-34e3-45f1-be18-c625298761f0)
+![4](https://github.com/user-attachments/assets/aa2de922-9a3c-432a-b658-c91b78e39a59)
 
 ### Status Filter
-![Status Filter](https://github.com/user-attachments/assets/fe1339aa-35a6-4f8d-b2e5-774d6240a4f0)
+![5](https://github.com/user-attachments/assets/2eb257da-8f9c-4b06-be52-38f6a85fa834)
 
 ### Combined Category & Status Filters
-![Combined Filters](https://github.com/user-attachments/assets/e7dc575f-1318-45fb-a99e-0b933d78198a)
+![6](https://github.com/user-attachments/assets/a1d7b371-dc1f-4150-b5c7-04fccddced5f)
 
 ### Task List
-![Task List](https://github.com/user-attachments/assets/9475ab93-6a36-4ca9-a45e-cda2978d6cd4)
+![7](https://github.com/user-attachments/assets/07958546-c7de-4ae5-b8c2-6108818d6de0)
 
 ### Completed Task
-![Completed Task](https://github.com/user-attachments/assets/0621aa49-e786-4302-9994-7a6083e61e92)
+![8](https://github.com/user-attachments/assets/d3dba056-af6c-466e-a8a6-39fdaa1d5683)
 
 ### Task Counter
-![Task Counter](https://github.com/user-attachments/assets/dd27f216-fe6b-42da-b4c7-841594553416)
+![9](https://github.com/user-attachments/assets/47516d3f-2af8-4445-a517-97c52a4c47dc)
 
 ### Progress Bar
-![Progress Bar](https://github.com/user-attachments/assets/4a697b37-4e7b-4cf3-9d59-ed2a8cd81079)
+![10](https://github.com/user-attachments/assets/7b9d7856-f524-4675-ab3d-fedf3ca7e420)
 
 ---
 
