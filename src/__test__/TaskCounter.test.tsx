@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import TaskCounter from "@/components/TaskCounter";
-import exp from "constants";
+import TaskCounter from "@/components/TaskCounter/TaskCounter";
 
 test('Displays total and completed tasks count', () => {
     render(<TaskCounter total={10} completed={5}/>);

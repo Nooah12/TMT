@@ -1,5 +1,6 @@
+// 3 of 3 passes atm
 import { render, screen, fireEvent } from "@testing-library/react";
-import StatusFilter from "@/components/StatusFilter";
+import StatusFilter from "@/components/StatusFilter/StatusFilter";
 
 test('Renders status filter', () => {
     render(<StatusFilter selectedStatus="" onChange={jest.fn}/>)
