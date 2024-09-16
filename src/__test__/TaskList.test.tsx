@@ -1,6 +1,7 @@
+// 4 of 4 passes atm
 import { render, screen, fireEvent } from '@testing-library/react';
-import TaskList from '@/components/TaskList';
-import StatusFilter from '@/components/StatusFilter';
+import TaskList from '@/components/TaskList/TaskList';
+import StatusFilter from '@/components/StatusFilter/StatusFilter';
 
 test('Renders list of tasks', () => {
   const tasks = [

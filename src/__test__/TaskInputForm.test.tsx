@@ -1,6 +1,6 @@
+// 5 of 5 passes atm
 import { render, screen, fireEvent } from '@testing-library/react';
-import TaskInputForm from '@/components/TaskInputForm';
-import exp from 'constants';
+import TaskInputForm from '@/components/TaskInputForm/TaskInputForm'
 
 test('Renders input form with description and category fields', () => {
   render(<TaskInputForm onAddTask={jest.fn()} />);
@@ -23,7 +23,7 @@ test('Does not submit the form with empty description', () => {
   const mockAddTask = jest.fn();
   render(<TaskInputForm onAddTask={mockAddTask} />);
 
-  fireEvent.change(screen.getByLabelText(/task description/i), { target: { value: '' } });
+  fireEvent.change(screen.getByLabelText(/task description/i), { target: { value: '' } }); // onchange event update state
   fireEvent.click(screen.getByRole('button', { name: /add task/i }));
 
   expect(mockAddTask).not.toHaveBeenCalled();

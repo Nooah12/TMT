@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import CategoryFilter from "@/components/CategoryFilter";
+import CategoryFilter from "@/components/CategoryFilter/CategoryFilter";
 
 test('Renders category filter', () => {
     render(<CategoryFilter categories={['Work', 'Personal']} selectedCategory="" onChange={jest.fn()} />); 
