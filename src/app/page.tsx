@@ -1,4 +1,5 @@
 'use client'
+import CategoryFilter from "@/components/CategoryFilter/CategoryFilter";
 import Header from "@/components/Header/Header";
 import StatusFilter from "@/components/StatusFilter/StatusFilter";
 import TaskInputForm from "@/components/TaskInputForm/TaskInputForm";
@@ -26,14 +27,15 @@ export default function Home() {
     setTasks([...tasks, newTask]);
   };
 
-  
+  // function för CategoryFilter o StatusFilter??
 
   return (
     <>
       <Header />
       <TaskInputForm onAddTask={handleAddTask} />
-      <TaskList />
+      <CategoryFilter />
       <StatusFilter selectedStatus={""} onChange={""} />
+      <TaskList />
     </>
   );
 }
