@@ -22,6 +22,10 @@ const CategoryFilter = ({ selectedCategory, onChange }:CategoryFilterProps) => {
 export default CategoryFilter; */
 
 
+
+
+
+// best way to do it with dynamically options??
 'use client'
 
 type CategoryFilterProps = {
@@ -32,7 +36,7 @@ type CategoryFilterProps = {
 
 const CategoryFilter = ({ categories, selectedCategory, onChange }: CategoryFilterProps) => {
   return (
-    <select
+    <select className="mb-1"
       value={selectedCategory}
       onChange={(e) => onChange(e.target.value)} // Pass the selected category to the parent component
       role="combobox"  // Ensures we satisfy the 'getByRole' selector in tests

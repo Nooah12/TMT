@@ -1,3 +1,4 @@
+// 2/2 tests completed atm
 import { render, screen, fireEvent } from "@testing-library/react";
 import CategoryFilter from "@/components/CategoryFilter/CategoryFilter";
 
