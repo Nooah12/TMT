@@ -1,14 +1,14 @@
 'use client'
 
-import { useState } from "react";
+import { HTMLInputTypeAttribute, useState } from "react";
 
 type taskInputFormProps = {
   onAddTask: (description: string, category: string) => void; // Pass the description and category
 }
 
 const taskInputForm = ({onAddTask}:taskInputFormProps) => {
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('Personal');
+  const [description, setDescription] = useState<HTMLInputTypeAttribute>('');
+  const [category, setCategory] = useState<HTMLInputTypeAttribute>('Personal');
 
   const handleAddTask = () => {
     // Check if the description is valid
@@ -19,7 +19,7 @@ const taskInputForm = ({onAddTask}:taskInputFormProps) => {
     // Call onAddTask with the description and category
     onAddTask(description, category);
 
-    // Optionally reset form after submission
+    // reset form after submission
     setDescription('');
   };
 
@@ -32,7 +32,6 @@ const taskInputForm = ({onAddTask}:taskInputFormProps) => {
             onChange={(e) => setDescription(e.target.value)} // Update description state
           />
         </div>
-        hello{category}
         <div className="flex flex-col text-start">
           <label className="p-2" htmlFor="category">Category:</label>
           <select className="p-2 border-2" value={category} id="category" name="category"
