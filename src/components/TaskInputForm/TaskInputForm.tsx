@@ -8,7 +8,7 @@ type taskInputFormProps = {
 
 const taskInputForm = ({onAddTask}:taskInputFormProps) => {
   const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('Personal');
 
   const handleAddTask = () => {
     // Check if the description is valid
@@ -21,7 +21,6 @@ const taskInputForm = ({onAddTask}:taskInputFormProps) => {
 
     // Optionally reset form after submission
     setDescription('');
-    setCategory('');
   };
 
   return (
@@ -29,17 +28,18 @@ const taskInputForm = ({onAddTask}:taskInputFormProps) => {
       <div className="bg-white p-2 m-auto w-3/4 md:w-2/4 lg:w-1/3 2xl:w-1/4 rounded">
         <div className="flex flex-col text-start ">
           <label className="p-2" htmlFor="description">Task Description:</label>
-          <input className="p-2 border-solid rounded" value={description} id="description" placeholder="Enter description"
+          <input className="p-2 border-2 rounded" value={description} id="description" placeholder="Enter description"
             onChange={(e) => setDescription(e.target.value)} // Update description state
           />
         </div>
+        hello{category}
         <div className="flex flex-col text-start">
           <label className="p-2" htmlFor="category">Category:</label>
-          <select className="p-2" value={category} id="category" name="category"
+          <select className="p-2 border-2" value={category} id="category" name="category"
             onChange={(e) => setCategory(e.target.value)} // update category state
           >
-            <option value="Personal">Personal</option>
-            <option value="work">Work</option>
+            <option value="Personal">Personal</option> {/* behöver stort P för testet */}
+            <option value="Work">Work</option>
           </select>
         </div>
         <button onClick={handleAddTask}>Add Task</button>

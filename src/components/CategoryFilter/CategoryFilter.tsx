@@ -29,12 +29,13 @@ export default CategoryFilter; */
 'use client'
 
 type CategoryFilterProps = {
-  categories: string[]; // Array of categories to display in the dropdown
+  categories: string[]; // Array of categories to display in the dropdown (from page.tsx)
   selectedCategory: string;
-  onChange: (category: string) => void; // Callback to notify parent when category changes
+  onChange: (category: string) => void;
 };
 
 const CategoryFilter = ({ categories, selectedCategory, onChange }: CategoryFilterProps) => {
+  //categories = ['Personal', 'Work'];
   return (
     <select className="mb-1"
       value={selectedCategory}
@@ -42,7 +43,7 @@ const CategoryFilter = ({ categories, selectedCategory, onChange }: CategoryFilt
       role="combobox"  // Ensures we satisfy the 'getByRole' selector in tests
     >
       <option value="">All Categories</option> 
-      {/* Dynamically render options based on the categories prop '*/}
+      {/* Dynamically render options based on the categories prop ?? something wrong?? '*/}
       {categories.map((category, index) => (
         <option key={index} value={category}>
           {category}
