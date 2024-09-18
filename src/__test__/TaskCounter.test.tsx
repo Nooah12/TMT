@@ -1,3 +1,4 @@
+// 2/2 pass atm
 import { render, screen } from "@testing-library/react";
 import TaskCounter from "@/components/TaskCounter/TaskCounter";
 

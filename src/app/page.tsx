@@ -2,19 +2,21 @@
 import CategoryFilter from "@/components/CategoryFilter/CategoryFilter";
 import Header from "@/components/Header/Header";
 import StatusFilter from "@/components/StatusFilter/StatusFilter";
+import TaskCounter from "@/components/TaskCounter/TaskCounter";
 import TaskInputForm from "@/components/TaskInputForm/TaskInputForm";
 import TaskList from "@/components/TaskList/TaskList";
 import { HTMLInputTypeAttribute, SetStateAction, useState } from "react";
 
-type Task = {
+// Do I even need this one here ??
+/* type Task = {
   id: number;
   description: string;
   category: string;
   completed: boolean; 
-};
+}; */
 
 export default function Home() {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([]); // fungerar ändå ?????????
   const [selectedCategory, setSelectedCategory] = useState<HTMLInputTypeAttribute>('')
   const [selectedStatus, setSelectedStatus] = useState<HTMLInputTypeAttribute>('')
 
@@ -63,6 +65,10 @@ export default function Home() {
     setTasks(updatedTasks);
   };
 
+  const totalTasks = tasks.length; // counting the total number of tasks
+  const completedTasks = tasks.filter(task => task.completed).length; // completed tasks = true??
+  
+
 // denna ok??
   const filteredTasks = tasks.filter(task => {
     const categoryMatches = selectedCategory ? task.category === selectedCategory : true;
@@ -75,11 +81,10 @@ export default function Home() {
       <Header />
     <main>
       <TaskInputForm onAddTask={handleAddTask} />
-      <CategoryFilter categories={categories} selectedCategory={selectedCategory}
-        onChange={handleCategoryFilter}
-      />
+      <CategoryFilter categories={categories} selectedCategory={selectedCategory} onChange={handleCategoryFilter} />
       <StatusFilter selectedStatus={selectedStatus} onChange={handleStatusFilter} />
       <TaskList onCompleteTask={handleCompleteTask} onDeleteTask={handleDeleteTask} tasks={filteredTasks} />
+      <TaskCounter total={totalTasks} completed={completedTasks} />
     </main>
     </>
   );

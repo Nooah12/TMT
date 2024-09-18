@@ -1,38 +1,12 @@
+import React from 'react';
+import { Task } from '@/utils/types';
+
 /* type Task = {
   id: number;
   description: string;
   category: string;
   completed: boolean;
-};
-
-type TaskListProps = {
-  onCompleteTask: () => {}
-  onDeleteTask: () => {}
-};
-
-const TaskList = ({ tasks, onCompleteTask, onDeleteTask }:TaskListProps) => {
-  return (
-    <ul>
-          <li key={task.id}>
-            <span>{task.description}</span>
-            <button onClick={() => onCompleteTask(task.id)}>Complete</button>
-            <button onClick={() => onDeleteTask(task.id)}>Delete</button>
-          </li>
-    </ul>
-  );
-};
-
-export default TaskList;
- */
-
-import React from 'react';
-
-type Task = {
-  id: number;
-  description: string;
-  category: string;
-  completed: boolean;
-};
+}; */
 
 type TaskListProps = {
   tasks?: Task[]; // Mark tasks as optional to avoid undefined issues
@@ -50,7 +24,7 @@ const TaskList = ({ tasks = [], onCompleteTask, onDeleteTask }:TaskListProps) =>
           tasks.map((task) => (
             <li key={task.id}>
               <span className='mr-1'>{task.description}</span>
-              <span>{task.category}</span> {/* Not working?? */}
+              <span>({task.category})</span> {/* Not working?? */}
               <button onClick={() => onCompleteTask(task.id)}>Complete</button>
               <button onClick={() => onDeleteTask(task.id)}>Delete</button>
             </li>
