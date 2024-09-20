@@ -6,17 +6,15 @@ import TaskCounter from "@/components/TaskCounter/TaskCounter";
 import TaskInputForm from "@/components/TaskInputForm/TaskInputForm";
 import TaskList from "@/components/TaskList/TaskList";
 import { HTMLInputTypeAttribute, SetStateAction, useState } from "react";
+import { Task } from "@/utils/types"; 
 
-// Do I even need this one here ??
-/* type Task = {
-  id: number;
-  description: string;
-  category: string;
-  completed: boolean; 
-}; */
+const defaultTasks = [
+  { id: 1, description: "Task 1", category: "Personal", completed: false },
+  { id: 2, description: "Task 2", category: "Work", completed: false }
+]
 
 export default function Home() {
-  const [tasks, setTasks] = useState<Task[]>([]); // fungerar ändå ?????????
+  const [tasks, setTasks] = useState<Task[]>(defaultTasks);
   const [selectedCategory, setSelectedCategory] = useState<HTMLInputTypeAttribute>('')
   const [selectedStatus, setSelectedStatus] = useState<HTMLInputTypeAttribute>('')
 

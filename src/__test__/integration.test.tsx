@@ -1,3 +1,4 @@
+// 3/3 atm
 import { render, screen, fireEvent } from "@testing-library/react";
 import Home from "@/app/page";
 
@@ -10,7 +11,7 @@ test('Adds a new task and updates the task list and counter', () => {
 
     expect(screen.getByText(/New Task \(Work\)/i)).toBeInTheDocument();
 
-    expect(screen.getByText(/Total tasks: 3/i)).toBeInTheDocument();
+    expect(screen.getByText(/Total tasks: 3/i)).toBeInTheDocument(); // 2 tests by default!
     expect(screen.getByText(/Completed tasks: 0/i)).toBeInTheDocument();
 });
 
@@ -42,6 +43,7 @@ test('Marks a task as completed and updates the task list and counter', () => {
 
     expect(screen.queryByText(/Task to Delete \(Work\)/i)).not.toBeInTheDocument();
 
+    //expect(screen.getByText(/Total tasks: 0/i)).toBeInTheDocument(); should have shown in in the readme
     expect(screen.getByText(/Total tasks: 2/i)).toBeInTheDocument();
     expect(screen.getByText(/Completed tasks: 0/i)).toBeInTheDocument();
   });
