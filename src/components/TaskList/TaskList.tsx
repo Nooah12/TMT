@@ -9,16 +9,20 @@ type TaskListProps = {
 
 const TaskList = ({ tasks = [], onCompleteTask, onDeleteTask }:TaskListProps) => {
   return (
-    <section>
+    <section className='w-[90%] 2xl:w-2/3'>
       <ul>
         {tasks.length === 0 ? (
           <p>No tasks available</p> 
         ) : (
           tasks.map((task) => (
-            <li key={task.id}>
-              <span className='mr-1'>{task.description} ({task.category})</span> {/* should work now, only one span */}
-              <button onClick={() => onCompleteTask(task.id)}>Complete</button>
-              <button onClick={() => onDeleteTask(task.id)}>Delete</button>
+            <li className='flex items-center justify-between' key={task.id}>
+              <div className='m-0'>
+                <span className='text-sm md:text-base'>{task.description} ({task.category})</span>
+              </div>
+              <div>
+                <button className='text-sm md:text-base m-1 p-2' onClick={() => onCompleteTask(task.id)}>Complete</button>
+                <button className='text-sm md:text-base m-1 p-2' onClick={() => onDeleteTask(task.id)}>Delete</button>
+              </div>
             </li>
           ))
         )}

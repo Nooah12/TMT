@@ -5,7 +5,7 @@ type TaskCounterProps = {
   
   const TaskCounter = ({ total, completed }: TaskCounterProps) => {
     return (
-      <section>
+      <section className="align-text-bottom">
         <p>Total tasks: {total}</p>
         <p>Completed tasks: {completed}</p>
       </section>
