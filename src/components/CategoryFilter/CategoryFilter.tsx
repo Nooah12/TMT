@@ -10,12 +10,12 @@ type CategoryFilterProps = {
 const CategoryFilter = ({ categories, selectedCategory, onChange }: CategoryFilterProps) => {
   //categories = ['Personal', 'Work'];
   return (
-    <select className="mb-1"
+    <select className="mb-1 p-1 rounded text-center"
       value={selectedCategory}
       onChange={(e) => onChange(e.target.value)} // Pass the selected category to the parent component
       role="combobox"  // Ensures we satisfy the 'getByRole' selector in tests
     >
-      <option value="">Categories</option> 
+      <option value="">All Categories</option> 
       {/* Dynamically render options based on the categories prop ?? something wrong?? '*/}
       {categories.map((category, index) => (
         <option key={index} value={category}>

@@ -42,20 +42,20 @@ export default function Home() {
   };
 
   // toggling behavior
-  /* const handleCompleteTask = (id: number) => {
+  const handleCompleteTask = (id: number) => {
     const updatedTasks = tasks.map(task => 
       task.id === id ? { ...task, completed: !task.completed } : task
     );
     setTasks(updatedTasks);
-  }; */
+  };
 
   // permently complete task 
-  const handleCompleteTask = (id: number) => {
+/*   const handleCompleteTask = (id: number) => {
     const updatedTasks = tasks.map(task => 
       task.id === id && !task.completed ? { ...task, completed: true } : task
     );
     setTasks(updatedTasks);
-  };
+  }; */
   
 
   const handleDeleteTask = (id: number) => {
