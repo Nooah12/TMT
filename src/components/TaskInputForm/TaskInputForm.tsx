@@ -3,7 +3,7 @@
 import { HTMLInputTypeAttribute, useState } from "react";
 
 type taskInputFormProps = {
-  onAddTask: (description: string, category: string) => void; // Pass the description and category
+  onAddTask: (description: string, category: string) => void;
 }
 
 const taskInputForm = ({onAddTask}:taskInputFormProps) => {
@@ -13,7 +13,7 @@ const taskInputForm = ({onAddTask}:taskInputFormProps) => {
   const handleAddTask = () => {
     // Check if the description is valid
     if (description.trim() === '') {
-      return alert('You need to type something!') // Optionally show an error message here
+      return alert('You need to type something!')
     }
     
     // Call onAddTask with the description and category
