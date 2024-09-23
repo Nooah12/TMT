@@ -28,20 +28,17 @@ export default function Home() {
       completed: false, // Always false for new tasks
     };
     // Add the new task to the tasks array
-    setTasks([...tasks, newTask]); // fungerar ändå??
+    setTasks([...tasks, newTask]);
   };
 
   const handleCategoryFilter = (category: string) => {
     setSelectedCategory(category);
-    // category filtering logic here??
   };
 
   const handleStatusFilter = (status: string) => {
     setSelectedStatus(status);
-    // and status here??
   };
 
-  // toggling behavior
   const handleCompleteTask = (id: number) => {
     const updatedTasks = tasks.map(task => 
       task.id === id ? { ...task, completed: !task.completed } : task //!task.completed means that it will always shift the current completed status

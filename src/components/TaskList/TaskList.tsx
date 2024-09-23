@@ -3,7 +3,7 @@ import { Task } from '@/utils/types';
 
 type TaskListProps = {
   tasks?: Task[]; // Mark tasks as optional to avoid undefined issues
-  onCompleteTask: (id: number) => void; // do I need id:number here?
+  onCompleteTask: (id: number) => void;
   onDeleteTask: (id: number) => void;
 };
 
@@ -16,7 +16,7 @@ const TaskList = ({ tasks = [], onCompleteTask, onDeleteTask }:TaskListProps) =>
         ) : (
           tasks.map((task) => {
             const buttonText = task.completed ? 'Undo' : 'Complete';
-            const completeButtonClass = task.completed ? 'undo-btn text-sm md:text-base m-1 p-2' : 'complete-btn text-sm md:text-base m-1 p-2';
+            const completeButtonClass = task.completed ? 'undo-btn text-sm m-1 p-2' : 'complete-btn text-sm m-1 p-2';
             return (
             <li className='flex items-center justify-between' key={task.id}>
               <div className='m-0'>
@@ -24,7 +24,7 @@ const TaskList = ({ tasks = [], onCompleteTask, onDeleteTask }:TaskListProps) =>
               </div>
               <div>
                 <button className={completeButtonClass} onClick={() => onCompleteTask(task.id)}>{buttonText}</button>
-                <button className='delete-btn text-sm md:text-base m-1 p-2' onClick={() => onDeleteTask(task.id)}>Delete</button>
+                <button className='delete-btn text-sm m-1 p-2' onClick={() => onDeleteTask(task.id)}>Delete</button>
               </div>
             </li>
             );
