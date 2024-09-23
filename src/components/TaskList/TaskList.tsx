@@ -9,7 +9,7 @@ type TaskListProps = {
 
 const TaskList = ({ tasks = [], onCompleteTask, onDeleteTask }:TaskListProps) => {
   return (
-    <section className='w-[90%] 2xl:w-2/3 mb-4'>
+    <section className='w-[90%] mb-4'>
       <ul>
         {tasks.length === 0 ? (
           <p>No tasks available</p> 

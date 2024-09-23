@@ -27,7 +27,6 @@ export default function Home() {
       category,
       completed: false, // Always false for new tasks
     };
-    // Add the new task to the tasks array
     setTasks([...tasks, newTask]);
   };
 
@@ -54,8 +53,6 @@ export default function Home() {
   const totalTasks = tasks.length; // counting the total number of tasks
   const completedTasks = tasks.filter(task => task.completed).length; // completed tasks = true??
   
-
-// denna ok??
   const filteredTasks = tasks.filter(task => {
     const categoryMatches = selectedCategory ? task.category === selectedCategory : true;
     const statusMatches = selectedStatus === 'completed' ? task.completed : selectedStatus === 'pending' ? !task.completed : true;
@@ -67,8 +64,10 @@ export default function Home() {
       <Header />
     <main>
       <TaskInputForm onAddTask={handleAddTask} />
-      <CategoryFilter categories={categories} selectedCategory={selectedCategory} onChange={handleCategoryFilter} />
-      <StatusFilter selectedStatus={selectedStatus} onChange={handleStatusFilter} />
+      <section className="flex gap-4 mb-4">
+        <CategoryFilter categories={categories} selectedCategory={selectedCategory} onChange={handleCategoryFilter} />
+        <StatusFilter selectedStatus={selectedStatus} onChange={handleStatusFilter} />
+      </section>
       <TaskList onCompleteTask={handleCompleteTask} onDeleteTask={handleDeleteTask} tasks={filteredTasks} />
       <TaskCounter total={totalTasks} completed={completedTasks} />
     </main>

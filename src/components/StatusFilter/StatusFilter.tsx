@@ -7,7 +7,7 @@ type StatusFilterProps = {
 
 const StatusFilter = ({ selectedStatus, onChange }:StatusFilterProps) => {
   return (
-    <select className="mb-4 p-1 rounded text-center"
+    <select className="p-1 text-center"
       value={selectedStatus}
       onChange={(e) => onChange(e.target.value)} 
       role="combobox"  // ensures we satisfy the 'getByRole' selector in tests?

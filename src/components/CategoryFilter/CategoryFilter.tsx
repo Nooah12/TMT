@@ -8,7 +8,7 @@ type CategoryFilterProps = {
 
 const CategoryFilter = ({ categories, selectedCategory, onChange }: CategoryFilterProps) => {
   return (
-    <select className="mb-1 p-1 rounded text-center"
+    <select className="p-1 text-center"
       value={selectedCategory}
       onChange={(e) => onChange(e.target.value)}
       role="combobox"
