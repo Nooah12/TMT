@@ -27,7 +27,7 @@ export default function Home() {
       category,
       completed: false, // Always false for new tasks
     };
-    setTasks([...tasks, newTask]);
+    setTasks([newTask, ...tasks]);  
   };
 
   const handleCategoryFilter = (category: string) => {
