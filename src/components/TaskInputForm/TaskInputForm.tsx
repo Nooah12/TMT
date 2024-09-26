@@ -11,7 +11,6 @@ const taskInputForm = ({onAddTask}:taskInputFormProps) => {
   const [category, setCategory] = useState<HTMLInputTypeAttribute>('Personal');
 
   const handleAddTask = () => {
-    // Check if the description is valid
     if (description.trim() === '') {
       return alert('You need to type something!')
     }

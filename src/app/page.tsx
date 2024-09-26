@@ -40,7 +40,7 @@ export default function Home() {
 
   const handleCompleteTask = (id: number) => {
     const updatedTasks = tasks.map(task => 
-      task.id === id ? { ...task, completed: !task.completed } : task //!task.completed means that it will always shift the current completed status
+      task.id === id ? { ...task, completed: !task.completed } : task
     );
     setTasks(updatedTasks);
   };
@@ -50,8 +50,8 @@ export default function Home() {
     setTasks(updatedTasks);
   };
 
-  const totalTasks = tasks.length; // counting the total number of tasks
-  const completedTasks = tasks.filter(task => task.completed).length; // completed tasks = true??
+  const totalTasks = tasks.length;
+  const completedTasks = tasks.filter(task => task.completed).length;
   
   const filteredTasks = tasks.filter(task => {
     const categoryMatches = selectedCategory ? task.category === selectedCategory : true;

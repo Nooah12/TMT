@@ -10,7 +10,7 @@ const StatusFilter = ({ selectedStatus, onChange }:StatusFilterProps) => {
     <select className="p-1 text-center"
       value={selectedStatus}
       onChange={(e) => onChange(e.target.value)} 
-      role="combobox"  // ensures we satisfy the 'getByRole' selector in tests?
+      role="combobox"
     >
       <option value="all">All Status</option> 
       <option value="completed">Completed</option>
