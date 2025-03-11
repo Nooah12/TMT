@@ -62,15 +62,15 @@ export default function Home() {
   return (
     <>
       <Header />
-    <main>
+    <main className="w-full max-w-3xl mx-auto">
       <TaskInputForm onAddTask={handleAddTask} />
-      <section className="flex gap-4 mb-4">
+      <section className="flex gap-8 mb-4">
         <CategoryFilter categories={categories} selectedCategory={selectedCategory} onChange={handleCategoryFilter} />
         <StatusFilter selectedStatus={selectedStatus} onChange={handleStatusFilter} />
       </section>
       <TaskList onCompleteTask={handleCompleteTask} onDeleteTask={handleDeleteTask} tasks={filteredTasks} />
-      <TaskCounter total={totalTasks} completed={completedTasks} />
     </main>
+      <TaskCounter total={totalTasks} completed={completedTasks} />
     </>
   );
 }
